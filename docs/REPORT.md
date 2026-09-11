@@ -444,3 +444,42 @@ Before committing this report:
 - [ ] No unsupported headline numbers remain.
 - [ ] Gemini configuration does not expose an API key.
 - [ ] README reproduces the final results in under 15 minutes.
+
+## Product Walkthrough
+
+### 1. Agent Dashboard
+
+The dashboard provides the main customer-support workflow. A customer message
+is processed to produce an intent classification, a drafted response, and an
+auto-handle or escalation decision with confidence and reasoning.
+
+![Agent Dashboard](Screenshots/dashboard.png)
+
+### 2. AI-Generated Support Response
+
+The agent displays the predicted intent, escalation decision, confidence score,
+escalation reasoning, and the drafted customer-facing response.
+
+![AI Support Response](Screenshots/dashboard-response.png)
+
+### 3. Data Ingestion
+
+The application supports ingestion of historical Twitter customer-support
+conversations through CSV upload. These conversations provide the historical
+support context used by the system.
+
+![Data Ingestion](Screenshots/data-ingestion.png)
+
+### 4. Model Evaluation
+
+The evaluation interface compares the AI agent against baseline approaches
+using the golden evaluation set.
+
+![Model Evaluation](Screenshots/evaluation.png)
+
+### 5. Evaluation in Progress
+
+The evaluation interface provides feedback while the golden-set evaluation
+is running.
+
+![Evaluation Running](Screenshots/evaluation-running.png)
