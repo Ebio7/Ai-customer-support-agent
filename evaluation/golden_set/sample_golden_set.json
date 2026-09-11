@@ -1,0 +1,113 @@
+{
+  "description": "Sample golden set for Hiver Support Agent evaluation",
+  "brand": "AmazonSupport",
+  "sampling_method": "Stratified random sampling across intent categories and conversation types",
+  "labeling_instructions": "Each example was manually labelled with intent, escalation decision, and expected response approach",
+  "examples": [
+    {
+      "id": 1,
+      "customer_message": "My package was supposed to arrive yesterday but it's still not here. Where is it?",
+      "intent": "shipping_delay",
+      "escalation_decision": "AUTO_HANDLE",
+      "expected_response_approach": "Provide tracking information and estimated delivery date",
+      "complexity": "low",
+      "human_label": "intent:shipping_delay, escalation:AUTO_HANDLE, approach:provide_tracking"
+    },
+    {
+      "id": 2,
+      "customer_message": "I've been charged twice for the same order. This is unacceptable! I want my money back now!",
+      "intent": "billing_question",
+      "escalation_decision": "AUTO_HANDLE",
+      "expected_response_approach": "Acknowledge the duplicate charge, apologize, and initiate refund process",
+      "complexity": "medium",
+      "human_label": "intent:billing_question, escalation:AUTO_HANDLE, approach:initiate_refund"
+    },
+    {
+      "id": 3,
+      "customer_message": "Your product is defective and caused damage to my property. I'm going to sue you if this isn't resolved immediately.",
+      "intent": "complaint",
+      "escalation_decision": "ESCALATE",
+      "expected_response_approach": "Requires legal team involvement due to threat of lawsuit",
+      "complexity": "high",
+      "human_label": "intent:complaint, escalation:ESCALATE, approach:legal_escalation"
+    },
+    {
+      "id": 4,
+      "customer_message": "Can you tell me if this product is compatible with Mac computers?",
+      "intent": "product_inquiry",
+      "escalation_decision": "AUTO_HANDLE",
+      "expected_response_approach": "Provide compatibility information based on product specifications",
+      "complexity": "low",
+      "human_label": "intent:product_inquiry, escalation:AUTO_HANDLE, approach:specification_check"
+    },
+    {
+      "id": 5,
+      "customer_message": "I can't log into my account. It keeps saying invalid password but I'm using the right one.",
+      "intent": "account_issue",
+      "escalation_decision": "AUTO_HANDLE",
+      "expected_response_approach": "Guide through password reset process and account recovery",
+      "complexity": "medium",
+      "human_label": "intent:account_issue, escalation:AUTO_HANDLE, approach:password_reset"
+    },
+    {
+      "id": 6,
+      "customer_message": "The app keeps crashing every time I try to open it. I've tried reinstalling but nothing works.",
+      "intent": "technical_issue",
+      "escalation_decision": "AUTO_HANDLE",
+      "expected_response_approach": "Provide advanced troubleshooting steps and request device information",
+      "complexity": "medium",
+      "human_label": "intent:technical_issue, escalation:AUTO_HANDLE, approach:troubleshooting"
+    },
+    {
+      "id": 7,
+      "customer_message": "I need to speak to your manager right now. This is ridiculous!",
+      "intent": "complaint",
+      "escalation_decision": "ESCALATE",
+      "expected_response_approach": "Customer explicitly requested management - requires human intervention",
+      "complexity": "high",
+      "human_label": "intent:complaint, escalation:ESCALATE, approach:management_request"
+    },
+    {
+      "id": 8,
+      "customer_message": "What are your customer service hours?",
+      "intent": "general_inquiry",
+      "escalation_decision": "AUTO_HANDLE",
+      "expected_response_approach": "Provide customer service hours and contact information",
+      "complexity": "low",
+      "human_label": "intent:general_inquiry, escalation:AUTO_HANDLE, approach:provide_hours"
+    },
+    {
+      "id": 9,
+      "customer_message": "I ordered this item 2 weeks ago and still haven't received it. The tracking hasn't updated in 10 days.",
+      "intent": "shipping_delay",
+      "escalation_decision": "AUTO_HANDLE",
+      "expected_response_approach": "Investigate tracking status and provide updated delivery estimate",
+      "complexity": "medium",
+      "human_label": "intent:shipping_delay, escalation:AUTO_HANDLE, approach:tracking_investigation"
+    },
+    {
+      "id": 10,
+      "customer_message": "Why did my subscription price go up without any notice? This is bait and switch!",
+      "intent": "billing_question",
+      "escalation_decision": "ESCALATE",
+      "expected_response_approach": "Customer upset about pricing changes - may require account review",
+      "complexity": "high",
+      "human_label": "intent:billing_question, escalation:ESCALATE, approach:pricing_review"
+    }
+  ],
+  "intent_distribution": {
+    "technical_issue": 25,
+    "billing_question": 30,
+    "shipping_delay": 35,
+    "product_inquiry": 25,
+    "complaint": 30,
+    "general_inquiry": 20,
+    "account_issue": 25
+  },
+  "complexity_distribution": {
+    "low": 80,
+    "medium": 100,
+    "high": 70
+  },
+  "total_examples": 250
+}

@@ -1,0 +1,160 @@
+.evaluation {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.evaluation-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.baseline-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.baseline-item {
+  background-color: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #4f46e5;
+}
+
+.baseline-item h4 {
+  color: #1a1a2e;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.metric-label {
+  color: #6b7280;
+}
+
+.metric-value {
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.evaluation-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.summary-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.summary-value.success {
+  color: #059669;
+}
+
+.detailed-results {
+  margin-top: 1.5rem;
+}
+
+.detailed-results h3 {
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+}
+
+.results-table {
+  overflow-x: auto;
+}
+
+.results-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th,
+.results-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.results-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
+}
+
+.results-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.message-cell {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.match-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.match-badge.match {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.match-badge.mismatch {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.instructions {
+  line-height: 1.6;
+}
+
+.instructions h3 {
+  color: #1a1a2e;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.instructions ul {
+  padding-left: 1.5rem;
+  color: #374151;
+}
+
+.instructions li {
+  margin-bottom: 0.5rem;
+}
